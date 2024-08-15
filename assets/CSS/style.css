@@ -1,0 +1,82 @@
+.contenedor {
+  width: 100%;
+  background-color: #ededed;
+}
+.subContenedor {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.navbar {
+  background-color: #0476b5 !important;
+}
+.navbar a {
+  color: white !important;
+  font-size: larger !important;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.row-navegacion {
+  background-color: #0476b5 !important  ;
+}
+.navegacion {
+  background-color: #0476b5 !important;
+  font-size: larger !important;
+}
+.carrito {
+  background-color: white;
+}
+.row-titulo-secundario {
+  background-color: #006491;
+  max-width: 100%;
+}
+.col-titulo-secundario {
+  color: white;
+  border-radius: 10px;
+  font-size: x-large;
+}
+.row-especialidades {
+  border: solid white;
+  border-radius: 10px;
+  background-color: aliceblue;
+}
+.row-acompañamientos {
+  border: solid white;
+  border-radius: 10px;
+  background-color: aliceblue;
+}
+
+.row-bebidas {
+  border: solid white;
+  border-radius: 10px;
+  background-color: aliceblue;
+}
+.col-subtitulo1 {
+  color: white;
+  font-size: large;
+}
+.col-subtitulo2 {
+  color: white;
+
+  background-color: #e3193b;
+  font-size: large;
+  border-radius: 10px;
+}
+.col-subtitulo3 {
+  color: white;
+  font-size: large;
+}
+.col-subtitulo4 {
+  color: white;
+  background-color: #e3193b;
+  font-size: large;
+  border-radius: 10px;
+}
+.img-esp {
+  max-width: 13%;
+}
+.img-acmp {
+  max-width: 13%;
+}
+.img-beb {
+  max-width: 13%;
+}
