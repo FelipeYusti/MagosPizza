@@ -29,66 +29,58 @@
                   </li>
                 </ul>
 
-                <button
-                  type="button"
-                  class="btn btn-primary"
-                  data-bs-toggle="modal"
-                  data-bs-target="#exampleModal"
-                  onclick="verFactura()"
-                >
-                  <img
-                    src="/assets/IMG/mbricartadd_99553.png"
-                    class="rounded float-end"
-                    alt="..."
-                  />
-                  <span class="badge text-bg-secondary" id="NotficacionPedido" s></span>
-                </button>
-
                 <!-- Modal -->
-                <div
-                  class="modal fade"
-                  id="exampleModal"
-                  tabindex="-1"
-                  aria-labelledby="exampleModalLabel"
-                  aria-hidden="true"
-                >
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Factura</h1>
-                        <button
-                          type="button"
-                          class="btn-close"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
-                      <div class="modal-body">
-                        <div class="row">
-                          <div class="col-12">
-                            <div class="card">
-                              <div class="card-body">
-                                <h5 class="card-title">Resumen de compra.</h5>
-                              </div>
-                              <ul class="list-group list-group-flush">
-                                <li class="list-group-item">Cantidad Producto:</li>
-                                <li class="list-group-item" id="TotalFactura">Total:</li>
-                              </ul>
-                              <div class="card-body">
-                                <button type="button" class="btn btn-primary">Pagar</button>
-                              </div>
-                            </div>
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+                    <i class="bi bi-bell"></i>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      onclick="verFactura()"
+                    >
+                      <img
+                        src="/assets/IMG/mbricartadd_99553.png"
+                        class="rounded float-end"
+                        alt="..."
+                      />
+                      <span class="badge text-bg-secondary" id="NotficacionPedido" s></span>
+                    </button>
+                   
+                  <!-- End Notification Icon -->
+
+                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+                    <li class="dropdown-header">
+                      <h2>Resumen de compra.</h2>
+                     
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider" />
+                    </li>
+
+                    <li class="notification-item">
+                      <i class="bi bi-exclamation-circle text-warning"></i>
+                      <div>
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 class="card-title"></h5>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Cantidad Producto:</li>
+                            <li class="list-group-item" id="TotalFactura">Total:</li>
+                          </ul>
+                          <div class="card-body">
+                            <button type="button" class="btn btn-primary">Pagar</button>
                           </div>
                         </div>
                       </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-                          Close
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                    </li>
+
+                  </ul>
+                  <!-- End Notification Dropdown Items -->
+                </li>
               </div>
             </div>
           </nav>
@@ -164,7 +156,7 @@
                 <div class="accordion-body">
                   <div class="row">
                     <div class="col-3">
-                      <div class="card" style="width: 18rem">
+                      <div class="card" style="width: 18rem" id="PizzaMargarita">
                         <img
                           src="/assets/IMG/pizza-margarita-1080x550-1.jpg"
                           class="card-img-top"
@@ -173,8 +165,7 @@
                         <div class="card-body">
                           <h5 class="card-title">Pizza Margarita</h5>
                           <p class="card-text">
-                            Some quick example text to build on the card title and make up the bulk
-                            of the card's content.
+                           Precio : $58.000
                           </p>
                           <input
                             class="form-control"
@@ -186,9 +177,9 @@
                           <button
                             type="button"
                             class="btn btn-primary mt-2"
-                            id="PizzaEsp"
-                            value="1"
-                            onclick="calcularFacturaEspeciales()"
+                            id="BtnPizzaMarg"
+                           
+                            
                           >
                             Agregar al carrito
                           </button>
@@ -196,13 +187,13 @@
                       </div>
                     </div>
                     <div class="col-3">
-                      <div class="card" style="width: 18rem">
+                      <div class="card" style="width: 18rem" id="Pizza4quesos">
                         <img src="/assets/IMG/pizaz4quesos.jpg" class="card-img-top" alt="..." />
                         <div class="card-body">
                           <h5 class="card-title">Pizza 4 quesos</h5>
                           <p class="card-text">
-                            Some quick example text to build on the card title and make up the bulk
-                            of the card's content.
+                            Precio : $46.000
+                        
                           </p>
                           <input
                             class="form-control"
@@ -214,9 +205,8 @@
                           <button
                             type="button"
                             class="btn btn-primary mt-2"
-                            id="PizzaEsp"
-                            value="2"
-                            onclick="calcularFacturaEspeciales()"
+                          
+                            id="BtnPizza4quesos"
                           >
                             Agregar al carrito
                           </button>
@@ -224,13 +214,12 @@
                       </div>
                     </div>
                     <div class="col-3">
-                      <div class="card" style="width: 18rem">
+                      <div class="card" style="width: 18rem" id="PizzaChampinion">
                         <img src="/assets/IMG/pizza_Champi.jpg" class="card-img-top" alt="..." />
                         <div class="card-body">
                           <h5 class="card-title">Pizza Champiniones</h5>
                           <p class="card-text">
-                            Some quick example text to build on the card title and make up the bulk
-                            of the card's content.
+                            Precio : $36.000
                           </p>
                           <input
                             class="form-control"
@@ -242,9 +231,8 @@
                           <button
                             type="button"
                             class="btn btn-primary mt-2"
-                            id="PizzaEsp"
-                            value="3"
-                            onclick="calcularFacturaEspeciales()"
+                            id="BtnPizzaChampi"
+                                                        
                           >
                             Agregar al carrito
                           </button>
@@ -252,13 +240,12 @@
                       </div>
                     </div>
                     <div class="col-3">
-                      <div class="card" style="width: 18rem">
+                      <div class="card" style="width: 18rem" id="PizzaChicago">
                         <img src="/assets/IMG/Pizza_chica.jpg" class="card-img-top" alt="..." />
                         <div class="card-body">
                           <h5 class="card-title">Pizza estilo chicago</h5>
                           <p class="card-text">
-                            Some quick example text to build on the card title and make up the bulk
-                            of the card's content.
+                            Precio : $68.000
                           </p>
                           <input
                             class="form-control"
@@ -270,9 +257,8 @@
                           <button
                             type="button"
                             class="btn btn-primary mt-2"
-                            id="PizzaEsp"
-                            value="4"
-                            onclick="calcularFacturaEspeciales()"
+                            id="BtnPizzaChicago"
+                                                       
                           >
                             Agregar al carrito
                           </button>
